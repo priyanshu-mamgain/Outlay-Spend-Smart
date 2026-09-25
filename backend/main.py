@@ -13,6 +13,8 @@ from models import ExpenseDB
 app = FastAPI(title="Outlay API")
 
 
+FRONTEND_URL = "https://outlay-spend-smart.netlify.app"
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -20,6 +22,7 @@ app.add_middleware(
         "http://localhost:5174",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
+        FRONTEND_URL,
     ],
     allow_credentials=True,
     allow_methods=["*"],
