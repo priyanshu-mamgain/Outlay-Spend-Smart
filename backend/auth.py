@@ -7,7 +7,7 @@ from jwt import PyJWKClient
 
 load_dotenv()
 
-SUPABASE_URL = os.getenv("VITE_SUPABASE_URL")
+SUPABASE_URL = os.getenv("SUPABASE_URL")
 
 if not SUPABASE_URL:
     raise RuntimeError("SUPABASE_URL is not configured")
